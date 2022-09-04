@@ -1,7 +1,7 @@
 {
   "site_package_search_strategy": "pep561",
   "source_directories": [
-    "."
+    "src"
   ],
   "taint_models_path": "/Users/dan/.venvs/default/lib/pyre_check/taint"
 }
