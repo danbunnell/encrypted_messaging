@@ -13,3 +13,8 @@ pip install cryptography
 pip install pep8
 
 ```
+
+## TODO
+
+- Add support for `ECDSA` key type
+- Implement `libsodium` variant
