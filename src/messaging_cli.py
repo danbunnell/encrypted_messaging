@@ -1,6 +1,5 @@
 """The Messaging command-line interface"""
 
-from io import UnsupportedOperation
 import sys
 from typing import List
 
