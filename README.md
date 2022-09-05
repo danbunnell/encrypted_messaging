@@ -10,4 +10,6 @@ pip install pyre-check
 pip install docopt
 pip install pyopenssl
 pip install cryptography
+pip install pep8
+
 ```
