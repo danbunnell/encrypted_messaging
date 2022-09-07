@@ -1,3 +1,4 @@
+"""Tests for the messaging module"""
 import unittest
 
 
