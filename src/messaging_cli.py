@@ -4,8 +4,8 @@ import sys
 from typing import List
 
 from docopt import docopt
-from crypto.types import KeyAlgorithm
-from messaging import MessagingService
+from lib.crypto.types import KeyAlgorithm
+from lib.messaging import MessagingService
 
 USAGE: str = """Secure Messaging.
 

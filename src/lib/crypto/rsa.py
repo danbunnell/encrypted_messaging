@@ -10,6 +10,8 @@ from cryptography.hazmat.primitives.serialization import (
     Encoding, PublicFormat, PrivateFormat, NoEncryption
 )
 
+from lib.crypto.types import PrivateKey, PublicKey
+
 class RSAConfigurationProvider:
     """Constant values used for RSA algorithms"""
     def get_encryption_padding(self) -> AsymmetricPadding:
@@ -21,7 +23,7 @@ class RSAConfigurationProvider:
             label=None)
 
 
-class RSAPublicKey:
+class RSAPublicKey(PublicKey):
     """An RSA-based public, or verify, key"""
 
     def __init__(self, inner_key: InternalPublicKey, config):
@@ -40,7 +42,7 @@ class RSAPublicKey:
             format=PublicFormat.SubjectPublicKeyInfo)
 
 
-class RSAPrivateKey:
+class RSAPrivateKey(PrivateKey):
     """An RSA-based private, or signing, key"""
 
     DEFAULT_ENCRYPTION_PADDING: AsymmetricPadding = OAEP

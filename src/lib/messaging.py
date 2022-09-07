@@ -1,13 +1,12 @@
 """A module with Messaging utilities"""
 
-from crypto.factory import KeyFactory
-from crypto.rsa import RSAPrivateKey
-from crypto.types import KeyAlgorithm
+from lib.crypto.factory import KeyFactory
+from lib.crypto.types import KeyAlgorithm, PrivateKey
 
 class MessagingService:
     """A service which provides messaging functionality"""
 
-    def gen_key(self, algorithm: KeyAlgorithm) -> RSAPrivateKey:
+    def gen_key(self, algorithm: KeyAlgorithm) -> PrivateKey:
         """Generates a key of the specified type"""
         key = KeyFactory.create(algorithm)
 

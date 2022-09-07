@@ -1,5 +1,6 @@
 """A module which specifies cryptographic types"""
 
+from abc import ABC, abstractmethod
 from enum import Enum
 
 class KeyAlgorithm(Enum):
@@ -19,3 +20,19 @@ class KeyAlgorithm(Enum):
     """An elliptical curve Digitial Signature Algorithm which may be vulnerable to     \
     insufficient randomization in the RNG, but is the most commonly supported ECC      \
     algorithm used for TLS. Can only be used for signing."""
+
+class PublicKey(ABC):
+    """An abstract class which provides the interface to a generic cryptographic public key"""
+    @abstractmethod
+    def to_bytes(self) -> bytes:
+        """Prints the raw PEM-formatted key"""
+
+class PrivateKey(ABC):
+    """An abstract class which provides the interface to a generic cryptographic private key"""
+    @abstractmethod
+    def public_key(self) -> PublicKey:
+        """Returns the associated public key"""
+
+    @abstractmethod
+    def to_bytes(self) -> bytes:
+        """Prints the raw PEM-formatted key"""
